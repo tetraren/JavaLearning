@@ -1,16 +1,31 @@
 
 public class SimpleTests {
 
-    public static void main(String[] args) {
-        Result result = calculate(1,2);
-        System.out.printf("var1=%d var2=%d sum=%d\n", result.var1, result.var2, result.sum);
-        boolean flag = true;
+    public class TestFinal {
+        public final int a;
 
-        if(flag) {
-            System.out.println(1);
-        } if (flag) {
-            System.out.println(2);
-        };
+        public TestFinal(int a) {
+            this.a = a;
+        }
+    }
+
+    public static void main(String[] args) {
+        //TestFinal a = new TestFinal(1);
+        //TestFinal b = new TestFinal(2);
+        SimpleTests tests = new SimpleTests();
+        System.out.println((tests.new TestFinal(1)).a);
+        System.out.println((tests.new TestFinal(2)).a);
+
+
+        // Result result = calculate(1,2);
+        // System.out.printf("var1=%d var2=%d sum=%d\n", result.var1, result.var2, result.sum);
+        // boolean flag = true;
+
+        // if(flag) {
+        //     System.out.println(1);
+        // } if (flag) {
+        //     System.out.println(2);
+        // };
 
     }
 
