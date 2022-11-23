@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/*
+ * Нарисовать прямоугольник
+ */
 public class Square {
 
     public static void main(String[] args) {
@@ -43,9 +45,7 @@ public class Square {
         
         drawLine(w, LineTypes.START);
         drawRectBody(w, h-2, LineTypes.BODY);
-        if (h > 1) {
-            drawLine(w, LineTypes.END);
-        }
+        drawLine(w, LineTypes.END);
     }
 
     /**

@@ -1,3 +1,6 @@
+/*
+ * Сумма простых чисел от 1 до 10
+ */
 public class PrimeSum {
 
     static int primeSum(int count) {
@@ -24,7 +27,7 @@ public class PrimeSum {
         return isPrime(num, (int)Math.sqrt(num));
     }
 
-    private final static boolean isPrime(int num, int div) {
+    private static boolean isPrime(int num, int div) {
         if(div == 1) return true;
         if(num % div == 0) return false;
 
@@ -33,18 +36,6 @@ public class PrimeSum {
 
 
     public static void main(String[] args) {
-        // System.out.println(isPrime(1));
-        // System.out.println(isPrime(2));
-        // System.out.println(isPrime(3));
-        // System.out.println(isPrime(4));
-        // System.out.println(isPrime(5));
-        // System.out.println(isPrime(6));
-        // System.out.println(isPrime(7));
-        // System.out.println(isPrime(8));
-        // //System.out.println(primeSum(10));
         System.out.printf("sum = %d", primeSum(10));
-        // test.readInt();
-        // SimpleTests test2 = new SimpleTests();
-        // test2.readInt();
     }
 }

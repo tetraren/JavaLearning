@@ -1,23 +1,59 @@
-import java.lang.ref.Reference;
+import java.util.List;
 
-interface Result { } 
 
 public class SimpleTests {
-    static Result test() {
-        int a = 1;
-        int b = 2;
-        return new Result() {
-            int result1=a, result2=b;
-        };
+
+    static String join(List<String> list, String delim) {
+
+        StringBuilder sb = new StringBuilder();
+    
+        String loopDelim = "";
+    
+        for(String s : list) {
+    
+            sb.append(loopDelim);
+            sb.append(s);            
+    
+            loopDelim = delim;
+        }
+    
+        return sb.toString();
+    }
+
+    int func(int num) {
+        if(num == 1) {
+            return 1;
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException  {
-        Result r = test();
-        int result1 = r.getClass().getDeclaredField("result1").getInt(r);
-        int result2 = r.getClass().getDeclaredField("result2").getInt(r);
-        System.out.printf("result1 = %d\n", result1);
-        System.out.printf("result2 = %d\n", result2);
+        
+        //GSonBuilder gbuilder = new GSonBuilder();
+        double num1 = -Double.MAX_VALUE;
+        double num2 = -1.0D;
+        //Double num3 = 0D;
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num1 > num2);
+        System.out.println(Math.nextAfter(0D, Double.POSITIVE_INFINITY));
 
+        // Test test1 = new Test(1);
+        // Test test2 = new Test(2);
+        // System.out.println(test1.var);
+        // System.out.println(test2.var);
+        // System.out.println(Test.var);
+        
+        // var i = 5;
+        // var ii = new Integer(5);
+        // System.out.println(i);
+        // System.out.println(ii);
+        
+        // String[] strings = {"1","2","3"};
+        // System.out.println(String.join(" ", strings));
+        
+        //System.out.println("Hello world");
         // foo("one param");
         // foo("two params", "two params");
         // foo("three params", "three params", "three params");

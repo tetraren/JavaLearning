@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/*
+ * Функция, соединяющая в строку любое количество параметров произвольного типа
+ */
 public class JoinStrings {
     public static String join(Object... values) {
         String result = "";
