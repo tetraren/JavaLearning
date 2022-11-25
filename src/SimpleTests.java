@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -29,7 +30,13 @@ public class SimpleTests {
     }
 
     public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException  {
-        
+        var list = new ArrayList<String>();
+        list.add("BadWord1");
+        list.add("BadWord2");
+        list.add("BadWord3");
+        for (String word : list) {
+            System.out.println(word);
+        }
         //GSonBuilder gbuilder = new GSonBuilder();
         double num1 = -Double.MAX_VALUE;
         double num2 = -1.0D;
