@@ -4,9 +4,8 @@ public class Square extends CorrectFigure {
 
     @Override
     void draw() {
-        int size = getSize();
 
-        int width = size;
+        int width = this.size;
 
         drawLine(width, "*", "-", "*");
         for(int i = 0; i < width; i++) {
